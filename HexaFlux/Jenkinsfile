@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def mavenHome = tool name: 'Maven', type: 'hudson.tasks.Maven$MavenInstallation'
+                    env.PATH = "${mavenHome}/bin:${env.PATH}"
+                }
+                sh 'mvn clean package'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    def appName = 'acelerador'
+                    def dockerImage = docker.build("janes/${appName}:${env.BUILD_ID}")
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    def appName = 'acelerador'
+                    sh "docker run -d -p 8760:8760 janes/${appName}:${env.BUILD_ID}"
+                }
+            }
+        }
+    }
+}

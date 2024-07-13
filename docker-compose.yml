@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  eureka-server:
+    image: eureka-server:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - hexaflux-network
+
+  acelerador:
+    image: acelerador:latest
+    container_name: hexaflux
+    ports:
+      - "8760:8760"
+    depends_on:
+      - mongo
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/hexaflux
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - hexaflux-network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - hexaflux-network
+
+networks:
+  hexaflux-network:
+    driver: bridge
