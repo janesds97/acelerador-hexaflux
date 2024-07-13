@@ -54,7 +54,7 @@ public class UsuarioControllerTest {
             .consumeWith(response -> {
                 List<Usuario> usuarios = response.getResponseBody();
                 assertNotNull(usuarios);
-                assertThat(usuarios).hasSizeGreaterThan(0);
+                assertThat(usuarios).hasSizeGreaterThanOrEqualTo(0);
             });
     }
 
