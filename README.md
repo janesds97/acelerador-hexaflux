@@ -67,6 +67,6 @@ Este repositorio contiene dos proyectos: `eureka-server` y `HexaFlux`. Ambos son
    
     [![Eureka-Server.png](https://i.postimg.cc/cChDXW0h/Eureka-Server.png)](https://postimg.cc/H8J4kfJ8)
    
-8. Usando la colección `zAcelerador-HexaFlux.postman_collection.json` se podrán testear los endpoints desde Postman
+8. Usando la colección `zAcelerador-HexaFlux.postman_collection.json` se podrán consumir los endpoints desde Postman
 
      [![End-Point-Postman.png](https://i.postimg.cc/XYRgKq93/End-Point-Postman.png)](https://postimg.cc/NKxTBgNP)
