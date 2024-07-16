@@ -58,3 +58,15 @@ Este repositorio contiene dos proyectos: `eureka-server` y `HexaFlux`. Ambos son
     ```sh
    cd ..
    docker-compose up --build
+
+5. En Docker Desktop se creará el contenedor con las imágenes generadas a través de los Dockerfiles
+   
+    [![Containers-Docker.png](https://i.postimg.cc/Qt5wgvFY/Containers-Docker.png)](https://postimg.cc/yg1LsQX0)
+
+6. Desde http://localhost:8761/ se podrá ver el servidor de Eureka activo
+   
+    [![Eureka-Server.png](https://i.postimg.cc/cChDXW0h/Eureka-Server.png)](https://postimg.cc/H8J4kfJ8)
+   
+8. Usando la colección `zAcelerador-HexaFlux.postman_collection.json` se podrán testear los endpoints desde Postman
+
+     [![End-Point-Postman.png](https://i.postimg.cc/XYRgKq93/End-Point-Postman.png)](https://postimg.cc/NKxTBgNP)
