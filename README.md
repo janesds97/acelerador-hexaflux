@@ -3,8 +3,9 @@
 Este proyecto es un acelerador de software para facilitar la creación y despliegue de microservicios reactivos con buenas prácticas de desarrollo de software usando WebFlux y Spring Cloud Netflix Eureka.
 
 ## Tecnologías Utilizadas
+- Java 17
 - Maven
-- Spring Boot
+- Spring Boot 3.3.1
 - Spring WebFlux
 - MongoDB
 - Eureka
