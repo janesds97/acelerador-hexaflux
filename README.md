@@ -41,7 +41,7 @@ Este repositorio contiene dos proyectos: `eureka-server` y `HexaFlux`. Ambos son
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/Acelerador-HexaFlux.git
+   git clone https://github.com/janesds97/Acelerador-HexaFlux.git
 
 2. Dirígete a la carpeta eureka-server para empaquetar el proyecto con Maven y crear la imagen de Docker
     ```sh
